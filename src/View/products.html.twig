@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block content %}
+
+{% for product in products %}
+    {{ product }}
+    {% if loop.index is divisible by(3) %}
+        <br/>
+    {% endif %}
+{% endfor %}
+    {{ dump(products) }}
+{% endblock %}
