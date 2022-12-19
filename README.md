@@ -51,3 +51,9 @@ An example (a basic list of items) is provided (you can load the *simple-mvc.sql
 ### How does URL routing work ?
 
 ![simple_MVC.png](./simple_MVC.png)
+
+---
+
+## The Links
+
+<a href="https://github.com/WildCodeSchool/simple-mvc">Link to <b>Simple MVC WCS</b></a>
