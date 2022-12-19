@@ -1,13 +1,21 @@
-# Simple MVC
+<h1>Simple MVC Starter Kit WCS (Starter Kit - Simple MVC, WCS Web PHP)</h1>
 
-## Description
+### Starter Kit - Simple MVC PHP created by WCS, we used during WCS Web PHP
+
+
+---
+
+## Starter Kit - Simple MVC
+
+This repo contains <b>Starter Kit - Symfony 5.*</b> with <b>GrumPHP</b> we used on <b>Project 3 of WCS</b>.
+### Description
 
 This repository is a simple PHP MVC structure from scratch.
 
 It uses some cool vendors/libraries such as Twig and Grumphp.
 For this one, just a simple example where users can choose one of their databases and see tables in it.
 
-## Steps
+### Steps
 
 1. Clone the repo from Github.
 2. Run `composer install`.
@@ -23,13 +31,13 @@ define('APP_DB_PWD', 'your_db_password');
 6. Go to `localhost:8000` with your favorite browser.
 7. From this starter kit, create your own web application.
 
-### Windows Users
+#### Windows Users
 
 If you develop on Windows, you should edit you git configuration to change your end of line rules with this command :
 
 `git config --global core.autocrlf true`
 
-## Example 
+### Example 
 
 An example (a basic list of items) is provided (you can load the *simple-mvc.sql* file in a test database). The accessible URLs are :
 
@@ -40,6 +48,6 @@ An example (a basic list of items) is provided (you can load the *simple-mvc.sql
 * Item add [localhost:8000/item/index/add](localhost:8000/item/add)
 * Item deletion [localhost:8000/item/index/delete/:id](localhost:8000/item/delete/2)
 
-## How does URL routing work ?
+### How does URL routing work ?
 
-![Simple MVC.png](https://raw.githubusercontent.com/WildCodeSchool/simple-mvc/master/Simple%20-%20MVC.png)
+![simple_MVC.png](./simple_MVC.png)

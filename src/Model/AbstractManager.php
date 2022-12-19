@@ -1,13 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: sylvain
- * Date: 07/03/18
- * Time: 20:52
- * PHP version 7
- */
-
 namespace App\Model;
 
 use App\Model\Connection;
@@ -19,9 +11,7 @@ use PDO;
 abstract class AbstractManager
 {
     protected PDO $pdo;
-
     public const TABLE = '';
-
     public function __construct()
     {
         $connection = new Connection();
@@ -37,7 +27,6 @@ abstract class AbstractManager
         if ($orderBy) {
             $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
         }
-
         return $this->pdo->query($query)->fetchAll();
     }
 
@@ -47,11 +36,10 @@ abstract class AbstractManager
      */
     public function selectOneById(int $id)
     {
-        // prepared request
+        // Prepared request
         $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE id=:id");
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
-
         return $statement->fetch();
     }
 
@@ -60,7 +48,7 @@ abstract class AbstractManager
      */
     public function delete(int $id): void
     {
-        // prepared request
+        // Prepared request
         $statement = $this->pdo->prepare("DELETE FROM " . static::TABLE . " WHERE id=:id");
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();

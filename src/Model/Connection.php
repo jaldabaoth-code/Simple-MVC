@@ -1,15 +1,5 @@
 <?php
 
-/**
- * Database connection
- *
- *
- *
- * @author adapted from Benjamin Besse
- *
- * @link   http://fr3.php.net/manual/fr/book.pdo.php classe PDO
- */
-
 namespace App\Model;
 
 use PDO;
@@ -27,13 +17,9 @@ use PDOException;
 class Connection
 {
     private PDO $pdoConnection;
-
     private string $user;
-
     private string $host;
-
     private string $password;
-
     private string $dbName;
 
     /**
@@ -61,8 +47,7 @@ class Connection
                 $this->password
             );
             $this->pdoConnection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-            // show errors in DEV environment
+            // Show errors in DEV environment
             if (APP_DEV) { // @phpstan-ignore-line
                 $this->pdoConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
